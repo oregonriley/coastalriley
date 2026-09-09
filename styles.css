@@ -688,3 +688,71 @@ p{margin-top:0}
     height:43px;
   }
 }
+
+
+/* v1.1 — Riley portrait placement */
+.hero-portrait{
+  aspect-ratio:3/4;
+  max-height:720px;
+}
+.hero-portrait img{
+  object-position:center center;
+}
+.candid{
+  aspect-ratio:3/4;
+  max-height:640px;
+}
+.candid img{
+  object-position:center 35%;
+}
+.contact-photo{
+  min-height:560px;
+}
+.contact-photo img{
+  object-position:center 32%;
+}
+.buyer-role{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:70px;
+  align-items:center;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.buyer-role-photo{
+  aspect-ratio:3/4;
+  max-height:650px;
+}
+.buyer-role-photo img{
+  object-position:center 32%;
+}
+.buyer-role-copy .body-copy{
+  max-width:650px;
+}
+.buyer-role-copy .button{
+  margin-top:18px;
+}
+
+@media (max-width:880px){
+  .buyer-role{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+  .buyer-role-photo{
+    max-height:680px;
+  }
+  .hero-portrait{
+    max-height:680px;
+  }
+}
+
+@media (max-width:520px){
+  .hero-portrait,
+  .candid,
+  .buyer-role-photo{
+    max-height:none;
+  }
+  .contact-photo{
+    min-height:460px;
+  }
+}
